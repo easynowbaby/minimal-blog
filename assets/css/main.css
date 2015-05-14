@@ -1,0 +1,363 @@
+/******************
+*******************
+*
+*  Typography
+*
+*******************
+*******************/
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../font/Raleway-Regular.ttf');  
+}
+
+@font-face {
+  font-family: 'Raleway Bold';
+  src: url('../font/Raleway-Bold.ttf');  
+}
+
+@font-face {
+  font-family: 'Raleway Thin';
+  src: url('../font/Raleway-Thin.ttf');  
+}
+
+
+
+
+
+
+/******************
+*******************
+*
+* Global
+*
+*******************
+*******************/
+
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 1.5;
+	font-family: 'Raleway', Arial, sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	text-decoration: none;
+	color: dodgerblue;
+	transition: color .3s;
+}
+
+a:hover {
+	color: rgb(30, 108, 184);
+}
+
+h1 {
+	font-family: 'Raleway Bold', serif;
+}
+
+h1 a {
+	color: white;
+}
+
+.homepage h2 {
+	font-family: 'Raleway Thin';
+	font-size: 25px;
+}
+
+h2.category {
+  margin: 0;  
+  text-align: center;
+  padding-top: 50px;
+}
+
+.info {
+	padding: 40px 20px 0;
+	color: white;
+	text-shadow: 3px 2px 2px rgb(66, 62, 62);
+}
+
+aside {
+	padding: 15px;
+	width: 100%;
+	height: 350px;
+	background-image: url(../img/sidebar.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+main {
+	padding: 30px;	
+}
+
+article {
+	padding: 30px 0;
+}
+
+.homepage article span {
+	float: right;
+	margin-top: 1.2em;
+}
+
+.homepage article > a {
+	float: left;
+	margin-top: 1.2em;
+	max-width: calc(100% - 150px)
+}
+
+.homepage article > a h3 {
+	margin: 0;
+}
+
+.homepage article .body {
+	padding-top: 1em;
+	clear: both;
+}
+
+/*******************
+* Single
+*******************/
+
+main.single {
+	margin-top: 350px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.single article p  {
+	font-size: 19px;
+	text-align: justify;
+}
+
+.bg-img {
+	position: absolute;
+	height: 350px;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;	
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	background-clip: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-transition: all 0.4s ;
+	-o-transition: all 0.4s ;
+	transition: all 0.4s ;
+}
+
+
+/*******************
+* Admin
+*******************/
+
+.admin {
+	background-color: #efefef
+}
+
+.admin #body {
+	width: 100%;
+	height: 250px;
+}
+
+.admin main {
+	max-width: 960px;
+	display: block;
+	margin: 0 auto;	
+}
+
+.admin ul {
+	padding: 0;
+}
+
+.admin li {
+	list-style: none;
+	margin: 15px 0;
+}
+
+.admin .inputs > li:nth-child(1),
+.admin .inputs > li:nth-child(2),
+.admin .inputs > li:nth-child(3) {
+	display: inline-block;
+	width: 33%;
+	margin-right: -4px;     
+  padding: 0px 5px;
+}
+
+.admin .inputs > li:nth-child(1) input,
+.admin .inputs > li:nth-child(2) input,
+.admin .inputs > li:nth-child(3) input {
+	width: 100%;
+}
+
+.admin .uploads,
+.admin .buttons {
+	width: 50%;
+	float: left;
+}
+
+.admin .buttons li {
+	display: inline-block;
+	width: 100%;
+}
+
+.admin .buttons li input {
+	width: 80%;
+}
+
+.admin .uploaded-pictures li {
+	display: inline-block;
+	width: 50%;
+}
+
+.admin .edit select {
+	max-width: 100%;
+}
+
+/*.admin .success-message {
+  clear: both;
+  display: block;
+  background-color: lime;
+  padding: 5px;
+  margin-top: 4em;
+}*/
+
+.admin #image-list li {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.admin #image-list li img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.admin #status {
+  min-height: 33px;
+  margin-bottom: 0;  
+  transition: all 0.3s;
+}
+
+.success {
+  background-color: rgb(25, 214, 25);
+}
+
+.error {
+	background-color: orange;
+}
+
+
+
+/******************
+*******************
+*
+* Media queries
+*
+*******************
+*******************/
+
+@media only screen and (min-width: 550px) {
+
+	article {
+		padding: 30px 40px;
+	}
+
+}
+
+@media only screen and (min-width: 800px) {
+
+	article {
+		padding: 30px 100px;
+	}
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+	aside {
+		width: 400px;
+		height: 100%;
+		position: fixed;
+	}	
+
+	main {
+		margin-left: 400px;
+		padding: 0;
+	}
+
+	article {
+		padding: 30px 80px;
+	}
+
+	article:first-child {
+		padding-top: 75px;
+	}
+
+	/*******************
+	* Single
+	*******************/
+
+	main.single {
+		margin-top: 0;
+		margin-left: 33.333%;
+	}
+
+	main.single article {
+		min-height: 100vh
+	}	
+
+	.bg-img {
+		position: fixed;
+		height: auto;		
+		z-index: -1;
+		right: 66.666%;		
+	}
+	
+}
+
+@media only screen and (min-width: 1200px) {
+
+	aside {
+		width: 550px;
+	}
+
+	main {
+		margin-left: 550px;
+		padding: 0;
+	}
+
+	article {
+		max-width: 800px;
+  		margin: 0 auto;
+	}		
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+	/*******************
+	* Single
+	*******************/
+
+	main.single {		
+		margin-left: 45%;
+	}
+
+	.bg-img {
+		right: 55%;
+	}
+
+}
+
+
